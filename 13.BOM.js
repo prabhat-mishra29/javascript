@@ -39,6 +39,7 @@ document.write("w : "+w);
     4.window.resizeTo() - resize the current window
 */
 
+
 /*
 2.JS/Window Screen:---------------
   >The window.screen object contains information about the user's screen.
@@ -66,6 +67,7 @@ document.write("<br>Screen available width: " +d5);
 let d6=screen.availHeight;
 document.write("<br>Screen available Height: " +d6);
 
+
 /*
 3.JS/Window Location:-------------------
   >The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
@@ -90,8 +92,66 @@ let l5=location.port;
 document.write("<br>Location port: " +l5);
 
 function newDoc1() {
-  location.assign("https://www.google.com")
+  location.assign("https://www.google.com");
 }
 function newDoc2() {
   window.open("https://www.google.com","_parent");
 }
+
+
+/*
+4.JS/Window History:------------
+  >The window.history object contains the browsers history.
+  >The window.history object can be written without the window prefix.
+  >To protect the privacy of the users, there are limitations to how JavaScript can access this object.
+  >Some methods:-----
+    1.history.back() - same as clicking back in the browser
+    2.history.forward() - same as clicking forward in the browser
+*/
+function newDoc3() {
+  history.back();
+}
+function newDoc4() {
+  history.forward();
+}
+
+
+/*
+5.JS/Window Navigator:--------
+  >The window.navigator object contains information about the visitor's browser.
+  >The window.navigator object can be written without the window prefix.
+  >some methods:--
+    a)Browser Cookies:-------
+      The 'cookieEnabled' property returns true if cookies are enabled, otherwise false. */
+      let n1=navigator.cookieEnabled;
+      document.write("<br><br>cookieEnabled is : " +n1); 
+
+  /*b)Browser Application Name:----------
+      The 'appName' property returns the application name of the browser. */
+      let n2=navigator.appName;
+      document.write("<br>appName is : " +n2 ); 
+      /*Warning:---
+         This property is removed (deprecated) in the latest web standard.
+         Most browsers (IE11, Chrome, Firefox, Safari) returns Netscape as appName. */
+
+  /*c)Browser Application Code Name:-------
+      The 'appCodeName' property returns the application code name of the browser. */
+      let n3=navigator.appCodeName;
+      document.write("<br>appCodeName is : " +n3 ); 
+      /*Warning:-----
+         This property is removed (deprecated) in the latest web standard.
+         Most browsers (IE11, Chrome, Firefox, Safari, Opera) returns Mozilla as appCodeName. */
+
+  /*d)The Browser Engine:---------
+      The 'product' property returns the product name of the browser engine. */
+      let n4=navigator.product;
+      document.write("<br>navigator.product is : " +n4 ); 
+      /*Warning:-----
+         This property is removed (deprecated) in the latest web standard.
+         Most browsers returns Gecko as product. */
+
+  /*e)The Browser Version:-----   
+      The 'appVersion' property returns version information about the browser. */
+      let n5=navigator.appVersion;
+      document.write("<br>app version is : " +n5 );
+      

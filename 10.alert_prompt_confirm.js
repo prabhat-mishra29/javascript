@@ -33,3 +33,7 @@ else{
 }
 
 //NOTE :-------- The exact location and look is determined by user which is a limitation!
+
+/*Line Breaks:-------
+   To display line breaks inside a popup box, use a back-slash followed by the character n. */
+   alert("Hello\nHow are you ?");
