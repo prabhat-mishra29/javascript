@@ -154,4 +154,77 @@ function newDoc4() {
       The 'appVersion' property returns version information about the browser. */
       let n5=navigator.appVersion;
       document.write("<br>app version is : " +n5 );
-      
+
+  /*f)The Browser Agent:-------
+      The 'userAgent' property returns the user-agent header sent by the browser to the server. */
+      let n6=navigator.userAgent;
+      document.write("<br>user Agent is : " +n6 );
+      /*Warning:---------
+         The information from the navigator object can often be misleading.
+         The navigator object should not be used to detect browser versions because:
+           1.Different browsers can use the same name.
+           2.The navigator data can be changed by the browser owner.
+           3.Some browsers misidentify themselves to bypass site tests.
+           4.Browsers cannot report new operating systems, released later than the browser.   */
+
+  /*g)The Browser Platform:-------
+      The 'platform' property returns the browser platform (operating system). */
+      let n7=navigator.platform;
+      document.write("<br>platform is : " +n7 );
+
+  /*h)The Browser Language:-------
+      The 'language' property returns the browser's language. */
+      let n8=navigator.language;
+      document.write("<br>language is : " +n8 );
+
+  /*i)Is The Browser Online ?:--------
+      The 'onLine' property returns true if the browser is online. */
+      let n9=navigator.onLine;
+      document.write("<br>is online : " +n9 );
+
+  /*j)Is Java Enabled?:-----
+      The javaEnabled() method returns true if Java is enabled.  */
+      let n10=navigator.javaEnabled();
+      document.write("<br>is java enabled : " +n10 );
+
+
+/*
+7.JS Timing:------
+  >The window object allows execution of code at specified time intervals.
+  >These time intervals are called timing events.
+  >The two key methods to use with JavaScript are:
+    1.setTimeout(function, milliseconds)
+    2.setInterval(function, milliseconds)
+  
+  >NOTE:---
+    The setTimeout() and setInterval() are both methods of the HTML DOM Window object.
+
+  1.The setTimeout() Method:----
+    syntax:-window.setTimeout(function, milliseconds);
+      >The first parameter is a function to be executed.
+      >The second parameter indicates the number of milliseconds before execution.  */
+      function newDoc5(){
+        alert("Helloooo");
+      }
+    /*
+  How to Stop the Execution?:-----
+    >The clearTimeout() method stops the execution of the function specified in setTimeout().
+    >If the function has not already been executed, you can stop the execution by calling the clearTimeout() method.
+    >syntax:-window.clearTimeout(timeoutVariable);
+      -The clearTimeout() method uses the variable returned from setTimeout(). */
+
+  /*
+  2.The setInterval() Method:-------
+    >The setInterval() method repeats a given function at every given time-interval.
+    >syntax:-window.setInterval(function, milliseconds);
+      -The first parameter is the function to be executed.
+      -The second parameter indicates the length of the time-interval between each execution.  */
+      function newDoc6(){
+        const d = new Date();
+        alert(d.toLocaleTimeString());
+      }
+    /*
+  How to Stop the Execution?:-------
+      >The clearInterval() method stops the executions of the function specified in the setInterval() method.
+      >syntax:--window.clearInterval(timerVariable);
+        -The clearInterval() method uses the variable returned from setInterval(). */
