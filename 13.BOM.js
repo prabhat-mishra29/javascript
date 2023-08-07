@@ -228,3 +228,9 @@ function newDoc4() {
       >The clearInterval() method stops the executions of the function specified in the setInterval() method.
       >syntax:--window.clearInterval(timerVariable);
         -The clearInterval() method uses the variable returned from setInterval(). */
+
+
+/*
+JS Cookies:---
+  LEARN everything about 'cookie' in W3SCHOOL website !
+*/

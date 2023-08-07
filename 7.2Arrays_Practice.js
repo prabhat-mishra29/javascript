@@ -1,7 +1,7 @@
 // How to take input from user and put in array
 let n=prompt("Enter array size:");
 n=Number.parseInt(n);
-let arr=[];
+let arr=[]; //OR we can define just like that :-- let arr = new Array();
 for(let i=0;i<n;i++){
     let a=prompt("Enter elments :");
     a=Number.parseInt(a);
