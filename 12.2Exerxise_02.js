@@ -5,9 +5,9 @@ requried !
 */
 alert("S : stone ; P : papper ; C : scissor");
 
-game();
 let x=true;
 while(x){
+game();
 let c=confirm("Do you want to continue ?");
 if(c){
   game();
