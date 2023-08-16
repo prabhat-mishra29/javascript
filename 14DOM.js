@@ -30,30 +30,93 @@ NOTE:--
 
 
 /*
-CHILDREN OF AN ELEMENT :---------
-    >Direct as well as deeply nested elements of an element are called it's children.
-    >child nodes:- Elements that are direct children.
-                   for example - <head> and <body> are children of <html>.
-    >descendant nodes:- All nested elements,children,their childen and so on. 
+HTML Nodes vs Elements :------------
+    >In the HTML DOM (Document Object Model), an HTML document is a collection of nodes with (or without) child nodes.
+    >Nodes are element nodes, text nodes, and comment nodes.
+    >Whitespace between elements are also text nodes.
+    >Elements are only element nodes.
 */
-console.log(document.body.firstChild); //First child element
-console.log(document.body.lastChild);  //Last child element
+/*
+childNodes vs children:-------------
+    >childNodes returns child nodes (element nodes, text nodes, and comment nodes).
+    >children returns child elements (not text and comment nodes).
+    >descendant nodes:- All nested elements,children,their childen and so on.
+*/
+/*
+Siblings vs Element Siblings:---------
+    >Siblings are "brothers" and "sisters".
+    >Siblings are nodes with the same parent (in the same childNodes list).
+    >Element Siblings are elements with the same parent (in the same children list).
+*/
 console.log(document.body.childNodes); //All child nodes
-console.log("Type of document.body.childNodes is :"+typeof(document.body.childNodes));
-    // NOTE:-- A 'space-line' is treated as a #text node!
-console.log(document.body.childNodes[0]); //same as first child element
-console.log(document.body.childNodes[document.body.childNodes.length-1]); //same as last child element
+console.log(document.body.firstChild); //First child node
+console.log(document.body.lastChild);  //Last child node
+console.log(document.body.childNodes[0]); //same as firstChild
+console.log(document.body.childNodes[document.body.childNodes.length-1]); //same as lastChild
+console.log(document.body.childNodes[1].nextSibling); //next child node
+console.log(document.body.childNodes[2].previousSibling);//previous child node
+console.log(document.body.firstChild.parentNode); 
 
-// hasChildNodes() :---
-//    method returns true if the specified node has any child nodes, otherwise false.
+console.log(document.body.children);//All child elements
+console.log(document.body.firstElementChild); //First child element
+console.log(document.body.lastElementChild);  //Last child element
+console.log(document.body.children[0]); //same as firstChild element
+console.log(document.body.children[document.body.children.length-1]); //same as lastChild element
+console.log(document.body.children[1].nextElementSibling); //next child element
+console.log(document.body.children[2].previousElementSibling);//previous child element
+console.log(document.body.firstElementChild.parentElement); 
+/*
+parentNode vs parentElement:-------------
+    >The parentNode property returns the parent node of an element or node.
+    >The parentElement property returns the parent element of the specified element.
+    >The difference between parentElement and parentNode, is that parentElement returns null if the parent node is not an element node.
+*/
+console.log(document.body.parentNode); // Returns the <html> element
+console.log(document.body.parentElement); // Returns the <html> element
+console.log(document.documentElement.parentNode); // Returns the Document node
+console.log(document.documentElement.parentElement); // Returns null (<html> does not have a parent ELEMENT node)
+
+
+/* 
+hasChildNodes() :---
+    >method returns true if the specified node has any child nodes, otherwise false. */
 let answer =document.body.hasChildNodes();
 console.log(answer);
-
-/*NOTE:--
-  -ChildNodes looks like an aray but it is not an array.It is a collection.So array methods wont work here.
-  -We can use Array.form(collection) to convert it into an array.
+/*
+NOTE:--
+    >An HTMLCollection or NODELIST may look like an array, but it is not.
+    >You can loop through an HTMLCollection or NodeList and refer to its elements with an index.
+    >ut you cannot use Array methods like push(), pop(), or join() on an HTMLCollection or NodeList.
 */
-let arr=[];
-arr=Array.from(document.body.childNodes);
-console.log(arr);
-console.log("Type of document.body.childNodes is :"+typeof(arr));
+let arr1=[];
+arr1=Array.from(document.body.childNodes);
+console.log(arr1);
+let arr2=[];
+arr2=Array.from(document.body.children);
+console.log(arr2);
+console.log("Type of document.body.childNodes is : "+typeof(arr1));
+console.log("Type of document.body.children is : "+typeof(arr2));
+
+
+/*
+DOM COLLECTION AND NODELIST:------
+    >A NodeList and an HTMLcollection is very much the same thing.
+    >Both are array-like collections (lists) of nodes (elements) extracted from a document. The nodes can be accessed by index numbers. The index starts at 0.
+    >Both have a length property that returns the number of elements in the list (collection).
+    >An HTMLCollection is a collection of document elements.
+    >A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+    >HTMLCollection items can be accessed by their name, id, or index number.
+    >NodeList items can only be accessed by their index number.
+    >An HTMLCollection is always a live collection. 
+      -Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.
+    >A NodeList is most often a static collection. 
+      -Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.
+    >The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.
+    >The querySelectorAll() method returns a static NodeList.
+    >The childNodes property returns a live NodeList.
+*/
+/*
+NOTE:---
+    >Use "$0" in the console to refer to the current element.
+    >Use "$1" in the console to refer to the previous element.
+*/
