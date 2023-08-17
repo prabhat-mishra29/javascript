@@ -120,3 +120,32 @@ NOTE:---
     >Use "$0" in the console to refer to the current element.
     >Use "$1" in the console to refer to the previous element.
 */
+
+
+/*
+SEARCHING THE DOM:----------
+    >"getElementById()" :-- This method returns an element with a specified value. 
+                         -- If two or more elements with the same id exist, getElementById() returns the first.
+    >"getElementsByClassName()" :-- This method returns a collection of elements with a specified class name(s).
+    >"getElementsByName()" :-- This method returns a collection of elements with a specified name.
+    >"getElementsByTagName()" :-- This method returns a collection of all elements with a specified tag name.
+    >"querySelector()" :-- This method returns the first element that matches a CSS selector.
+    >"querySelectorAll()" :-- This method returns all elements that matches a CSS selector(s).
+*/
+document.getElementById("demo").style.background="yellow";
+
+let b=document.getElementsByClassName("example_color");
+    b[0].style.background="lightblue";
+
+let c=document.getElementsByTagName("h4");
+    c[0].style.background="pink";
+
+let elements = document.getElementsByName("fname");
+document.getElementById("demo1").innerHTML = elements[0].tagName;
+
+document.querySelector(".example1").style.background= "red";
+
+let a=document.querySelectorAll(".example2");
+for(let i=0;i<a.length;i++){
+    a[i].style.background="green";
+}
