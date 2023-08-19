@@ -149,3 +149,26 @@ let a=document.querySelectorAll(".example2");
 for(let i=0;i<a.length;i++){
     a[i].style.background="green";
 }
+
+
+//SOME DOM METHODS :-----
+/*
+1.element.matches():----
+    >This method returns true if an element matches a specific CSS selector(s). */
+let d=document.getElementById("id1");
+console.log(d.matches(".class1"));
+/*
+2.element closest():---- 
+    >This method searches up the DOM tree for elements which matches a specified CSS selector.
+    >This method starts at the element itself, then the anchestors (parent, grandparent, ...) until a match is found.
+    >This method returns null() if no match is found. */
+let e=document.getElementById("myElement1");
+console.log(e.closest(".container"));
+e.style.border = "2px solid black";
+/*
+3.element.contains():----
+    >This method returns true if a node is a descendant of a node.
+    >This method returns false if not.*/
+let sp = document.getElementById("mySPAN");
+let f = document.getElementById("myDIV").contains(sp);
+console.log(f);

@@ -38,6 +38,22 @@
     <!-- "querySelectorAll()" -->
     <h2 class="example2">querySelectorAll1</h2>
     <p class="example2">querySelectorAll2</p> 
+
+    <!-- "element.matches()" -->
+    <div class="class1" id="id1">This is div1.</div>
+    <div class="class1" id="id2">This is div2.</div>
+
+    <!-- "element.closest()" -->
+    <div class="class2"> Grandparent
+        <div class="class2 container">Parent
+          <div id="myElement1" class="class2">The parent of this div element will be selected.</div>
+        </div>
+    </div>
+
+    <!-- "element.contains()" -->
+    <div id="myDIV">
+        <p>I am a p element inside "myDIV", and I have a <span id="mySPAN"><b>span</b></span> element inside of me.</p>
+    </div>
 <script src="14DOM.js"></script>
 </body>
 </html>
