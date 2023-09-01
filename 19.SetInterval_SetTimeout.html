@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="try it" onclick="myVar1 = setTimeout(newDoc5, 3000)">
+    <input type="button" value="stop it" onclick="clearTimeout(myVar1)">
+    <p>Click "Stop" to prevent the first function to execute.
+        (You must click "Stop" before the 3 seconds are up.)</p>
+    <input type="button" value="sum" onclick="setTimeout(sum1,4000,2,3)">
+    <br><br>
+
+    <input type="button" value="time" onclick="myVar2 = setInterval(newDoc6, 4000)">
+    <input type="button" value="stop it" onclick="clearInterval(myVar2)">
+    <p>Click "Stop" to prevent the first function to execute.
+        (You must click "Stop" before the 4 seconds are up.)</p>
+    <input type="button" value="sum" onclick="setInterval(sum2,4000,2,3)">
+    <script src="19.SetInterval_SetTimeout.js"></script>
+</body>
+</html>
