@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            background-color:yellow;
+        }
+        .container{
+            height:100px;
+            width:100px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bulb1" class="container"></div>
+    <br>
+    <div id="bulb2" class="container"></div>
+    <script>
+        setInterval(function(){
+          document.querySelector("#bulb1").classList.toggle("yellow");
+        },200);
+        setInterval(function(){
+            let x=document.querySelector("#bulb2");
+            x.style.backgroundColor = x.style.backgroundColor == "red" ? "green" : "red";
+        },200);
+    </script>
+</body>
+</html>
