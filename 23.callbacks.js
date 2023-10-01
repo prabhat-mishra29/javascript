@@ -108,4 +108,36 @@ function loadScript(src, callback) {
   
   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js", goodmorning);
 
-//
+/*
+Pyramid od Doom:--
+  >When we have callback inside callbacks.the code gets difficult to LockManager. 
+    loadScript("https://cdn.jsdelivr.net/npm/bootstrap1@5.2.1/dist/js/bootstrap.bundle.min.js", function goodmorning(error,src) {
+    if (error) {
+        console.log(error)
+        return
+      }
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap2@5.2.1/dist/js/bootstrap.bundle.min.js", function goodmorning(error,src) {
+        if (error) {
+        console.log(error)
+        return
+        }
+          loadScript("https://cdn.jsdelivr.net/npm/bootstrap3@5.2.1/dist/js/bootstrap.bundle.min.js", function goodmorning(error,src) {
+          if (error) {
+          console.log(error)
+          return
+          }
+          }
+        }
+      }
+    ); 
+
+  >As calls become more nested , the code becomes deeper and incresingly more difficult to manage.
+  >This is sometimes called "Callback hell" or "Pyramid of doom".
+*/
+
+/*
+Callback Alternatives:-
+    >With asynchronous programming, JavaScript programs can start long-running tasks, and continue running other tasks in paralell.
+    >But, asynchronus programmes are difficult to write and difficult to debug.
+    >Because of this, most modern asynchronous JavaScript methods don't use callbacks. Instead, in JavaScript, asynchronous programming is solved using Promises instead.
+*/
