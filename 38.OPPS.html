@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let a = {
+  name2: "Harry",
+  language: "JavaScript",
+  run: () => {
+    console.log("self run")
+  }
+}
+//Prototype:-- Javascript objects have a special property called prototype that is either null or references another object.
+console.log(a)
+
+let p = {
+  run: () => {
+    alert("run")
+  }
+}
+
+//We can set prototype by using this syntax:---
+a.__proto__ = p
+p.__proto__ = {
+  name: "Jackie"
+}
+//which means ['a' ke prototype main 'p' object haii and 'p' ke prototype main ek aur object haiii!]
+
+a.run();
+
+console.log(a.name);
+    
+</script>
+</body>
+</html> 

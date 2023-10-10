@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Create a note saving app which stores your note to localstorage and fetch the note which was saved!
+    alert("Your note is : "+localStorage.getItem("note"));
+    let a=prompt("Enter your note:");
+    if(a){                     //this means if you donot give any note then it will not take "null" 
+    localStorage.setItem("note",a); 
+    }
+
+    //Delete the note from previous question!
+    let c = confirm("Do you want to delete your note?")
+    if (c) {
+            localStorage.removeItem("note")
+            alert("Note deleted successfully!")
+    }
+    </script>
+</body>
+</html>
