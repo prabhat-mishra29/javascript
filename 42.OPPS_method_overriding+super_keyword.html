@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class Employee {
+  constructor(name) {
+    this.name = name
+    console.log(`${name} - Employee's constructor is here`)
+  }
+
+  login() {
+    console.log(`Employee has logged in`);
+  }
+
+  logout() {
+    console.log(`Employee has logged out`);
+  }
+
+  requestLeaves(leaves) {
+    console.log(`Employee has requested ${leaves} leaves - Auto approved`)
+  }
+}
+
+class Programmer extends Employee {
+  // constructor(...args){ ---> If there is no constructor in the child class, this is created automatically
+  //   super(...args)
+  // }
+
+  constructor(name) { //constructor overriding
+    super(name)       //go to parent constructor(name)
+    console.log(`This is a newly written constructor`)
+  }
+  
+  requestCoffee(x) {
+    console.log(`Employee has requested ${x} coffees`)
+  }
+
+  requestLeaves(leaves) {  //method overriding 
+    super.requestLeaves(4) //go to parent requestLeaves(leaves)
+    console.log("One extra is granted")
+  }
+}
+
+let e = new Programmer("Harry")
+e.login()
+e.logout()
+e.requestCoffee(4)
+e.requestLeaves(3)
+    </script>
+</body>
+</html>
