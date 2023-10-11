@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+//constructor() :--- This method is called automatically by new , so we can initialize the object there! 
+class RailwayForm {
+  constructor(name, train_no, address) {
+    this.name = name
+    this.train_no = train_no
+    this.address = address
+    console.log("CONSTRUCTOR CALLED..." + name + " " + train_no)
+  }
+
+  preview() {
+    alert(this.name + ": Your form is for Train number: " + this.train_no + " and your address is " + this.address)
+  }
+
+  submit() {
+    alert(this.name + ": Your form is submitted for train number: " + this.train_no)
+  }
+
+  cancel() {
+    alert(this.name + ": This form is cancelled for train number: " + this.train_no)
+    this.trainno = 0
+  }
+}
+
+let harryForm = new RailwayForm("Harry", 13488, "420, Pacific Ocean, Ocean, Bihar - 0000555")
+harryForm.preview()
+harryForm.submit()
+harryForm.cancel()
+harryForm.preview()
+   </script> 
+</body>
+</html>
