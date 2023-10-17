@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+>Static class methods are defined on the class itself.
+>You cannot call a static method on an object, only on an object class.
+*/
+class Animal {
+  constructor(name) {
+    this.name = Animal.capitalize(name)
+  }
+  walk() {
+    alert("Animal " + this.name + " is walking")
+  }
+  static capitalize(name) {
+    return name.charAt(0).toUpperCase() + name.substr(1, name.length)
+  }
+}
+
+j = new Animal("abinash")
+//We can do this way also :-
+//  j = new Animal(Animal.capitalize("jack"))
+j.walk()
+// console.log(j.capitalize("thisa")) // --- > this doesnt work
+    </script>
+</body>
+</html>

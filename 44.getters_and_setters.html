@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Classes may include getters and setters to get and set the computed properties.
+class Animal {
+  constructor(name) {
+    this._name = name
+  }
+  fly() {
+    console.log("Mai ud rha hu")
+  }
+  get name() {
+    return this._name
+  }
+  set name(newName) {
+    this._name = newName
+  }
+}
+
+class Rabbit extends Animal {
+  eatCarrot() {
+    console.log("Eating carrot")
+  }
+}
+
+//First the name property is changed to _name to avoid the name collision with the getter and setter,then the getter uses the get keyword as shown above.
+let a = new Rabbit("Bruno")
+a.fly()
+console.log(a.name)
+a.name = "Jack"
+console.log(a.name)
+let c = 56
+
+//Instanceof operator:---
+//  The instance operator allows to check whether an object belongs to a certain class.
+console.log(a instanceof Animal)
+console.log(a instanceof Rabbit)
+console.log(c instanceof Animal)
+    </script>
+</body>
+</html>
