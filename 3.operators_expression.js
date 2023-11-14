@@ -1,4 +1,4 @@
-/* Expressions :------
+        /* Expressions :------
         A fragment of code that produces a value is called an 'expression'.a
         Every value written literally is an Expression.  */
 2;
@@ -44,5 +44,5 @@ console.log("a == b =",a==b);
 console.log("a != b =",a!=b);
 let c=6;
 let d="6";
-console.log("a === b =",a===b);
-console.log("a !== b =",a!==b);
+console.log("c === d =",c===d);
+console.log("c !== d =",c!==d);
