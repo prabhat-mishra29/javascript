@@ -106,3 +106,32 @@ function average(a,b){
      return (a+b+c+d+e)/5;
  }
  console.log("MEAN = "+mean(2,3,4,5,6));
+
+ //Factory function
+ function create_rectangle1(len,bre){
+    return rectangle={
+        length:len,
+        bredth:bre,
+        draw(){
+            console.log("draw rectangle");
+        }
+    };
+ }
+
+ let rectangle_01=create_rectangle1(6,7);
+ console.log(rectangle_01.length);
+ console.log(rectangle_01.bredth);
+ rectangle_01.draw();
+
+//constructor function
+  function create_rectangle2(len,bre){
+    this.length=len;
+    this.bredth=bre;
+    this.draw=function (){
+        console.log("draw rectangle");
+    }
+ }
+ let rectangle_02=new create_rectangle2(8,9);
+ console.log(rectangle_02.length);
+ console.log(rectangle_02.bredth);
+ rectangle_02.draw();
